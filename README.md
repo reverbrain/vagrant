@@ -1,4 +1,5 @@
-vagrant
-=======
+Elliptics vagrant
+=================
 
-Elliptics vagrant repository
+Run `vagrant up`
+
