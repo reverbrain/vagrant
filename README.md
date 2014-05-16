@@ -1,0 +1,4 @@
+vagrant
+=======
+
+Elliptics vagrant repository
