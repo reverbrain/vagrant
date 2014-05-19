@@ -21,8 +21,11 @@ if [ $? -eq 0 ]; then
 fi
 disown
 
+echo "Waiting"
+sleep 10
+
 echo "Starting rift at 8080. "
-/usr/bin/rift_server -c server-config.json&
+rift_server -c server-config.json&
 
 if [ $? -eq 0 ]; then
 	echo "Started succefully"
