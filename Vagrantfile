@@ -29,10 +29,11 @@ Vagrant.configure("2") do |config|
         source: "ioserv.json",
         destination: "~/ioserv.json"
 
+    config.vm.provision "file",
+        source: "server-config.json",
+        destination: "~/server-config.json"
+
     config.vm.provision "shell",
         path: "install.sh"
-
-    # config.vm.provision "shell",
-    #     inline: "echo Please, run vagrant ssh to login. After that dnet_ioserv -c ioserv.json"
 
 end
