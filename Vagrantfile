@@ -19,7 +19,10 @@ Vagrant.configure("2") do |config|
     config.vm.box = "precise64-elliptics"
     config.vm.box_url = "http://repo.reverbrain.com/vagrant-base/precise64-docker.box"
 
+    # forward dnet_ioserv port
     config.vm.network :forwarded_port, guest: 1025, host: 1025
+    # forward rift port
+    config.vm.network :forwarded_port, guest: 8080, host: 8080
 
     config.vm.provision "file",
         source: "repo.reverbrain.list",
