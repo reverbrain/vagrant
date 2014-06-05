@@ -24,6 +24,10 @@ Vagrant.configure("2") do |config|
     # forward rift port
     config.vm.network :forwarded_port, guest: 8080, host: 8080
 
+    config.vm.provider "virtualbox" do |v|
+        v.memory = 1024
+    end
+
     config.vm.provision "file",
         source: "repo.reverbrain.list",
         destination: "~/repo.reverbrain.list"
