@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
     config.vm.define "Elliptics"
 
     config.vm.box = "precise64-elliptics"
-    config.vm.box_url = "http://repo.reverbrain.com/vagrant-base/precise64-docker.box"
+    config.vm.box_url = "https://github.com/cocaine/cocaine-vagrant/releases/download/v0.11/precise64-docker.box"
 
     # forward dnet_ioserv port
     config.vm.network :forwarded_port, guest: 1025, host: 1025
